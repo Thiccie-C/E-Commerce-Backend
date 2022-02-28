@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   // find all tags
   Tag.findAll({
     include: {
-      mode: Product
+      model: Product
     }
   })
   .then(tagData => res.json(tagData))
